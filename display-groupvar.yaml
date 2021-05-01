@@ -1,0 +1,17 @@
+---
+- name: display group variable
+  become: false
+  gather_facts: true
+  hosts: all
+  tasks:
+    - name: display variable
+      debug:
+        msg: "{{ domain | default('domain not set') }}"
+
+    - name: display variable
+      debug:
+        msg: "{{ group_names }}"
+
+    - name: display variable
+      debug:
+        msg: "{{ ansible_hostname }}"
