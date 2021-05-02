@@ -2,7 +2,9 @@ all:
   children:
     databases:
       hosts:
-        database:
+        localhost:
     webservers:
       hosts:
-        webserver:
+        lab-web01:
+        lab-web02:
+        lab-web03:
