@@ -1,0 +1,9 @@
+---
+- name: set variable to content of motd file
+  hosts: all
+  vars:
+    motd_value: "{{ lookup('file', '/etc/motd') }}"
+  tasks:
+    - name: display the content of motd
+      debug:
+        msg: "{{ motd_value }}"
